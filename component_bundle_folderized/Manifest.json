@@ -1,0 +1,57 @@
+{
+  "spec" : "http://eslap.cloud/manifest/component/1_0_0",
+  "name" : "eslap://multisep/components/folderized/0_0_1",
+  "runtime" : "eslap://slapdomain/runtimes/managed/privileged/nodejs/0_0_1",
+  "code": "folderized-bundle",
+  "configuration" : {
+    "tc_config_param_1" : "string",
+    "tc_config_param_2" : "number",
+    "prefix": "string"
+  },
+  "channels": {
+    "provides" : [{
+      "name": "sc1",
+      "type" : "eslap://eslap.cloud/channel/send/1_0_0",
+      "protocol" : "TBD"
+    },
+    {
+      "name": "rp1",
+      "type" : "eslap://eslap.cloud/channel/reply/1_0_0",
+      "protocol" : "TBD"
+    },
+    {
+      "name": "dc2",
+      "type" : "eslap://eslap.cloud/channel/duplex/1_0_0",
+      "protocol" : "TBD"
+    },
+    {
+      "name": "sepdest1",
+      "type":"eslap://eslap.cloud/channel/send/1_0_0",
+      "protocol":"TBD"
+    },
+    {
+      "name": "sepdest2",
+      "type":"eslap://eslap.cloud/channel/send/1_0_0",
+      "protocol":"TBD"
+    }],
+    "requires" : [{
+      "name": "dc1",
+      "type" : "eslap://eslap.cloud/channel/duplex/1_0_0",
+      "protocol" : "TBD"
+    },
+    {
+      "name": "rc1",
+      "type" : "eslap://eslap.cloud/channel/receive/1_0_0",
+      "protocol" : "TBD"
+    },
+    {
+      "name": "rq1",
+      "type" : "eslap://eslap.cloud/channel/request/1_0_0",
+      "protocol" : "TBD"
+    }]
+  },
+  "external" : "TBD",
+  "profile" : {
+    "threadability": "*"
+  }
+}
